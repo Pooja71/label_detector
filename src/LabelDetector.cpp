@@ -1,9 +1,11 @@
 #include "label_detector/LabelDetector.h"
 
-LabelDetector::LabelDetector(const string &str_filename):str_filename_(str_filename),is_image_open(true)
+LabelDetector::LabelDetector():is_image_open(true)
 {
     ros::NodeHandle pnh;
-    pub_= nh_.advertise<std_msgs::String>("labels",100);   
+    nh_.getParam("image_src", str_filename_);
+    ROS_INFO("%s",str_filename_.c_str());
+ //   pub_= nh_.advertise<std_msgs::String>("labels",100);   
     ReadImage();
 }
 
@@ -62,9 +64,9 @@ void LabelDetector::FindContours()
 void LabelDetector::Detect()
 {
     ros::Rate rate(100);
-    std_msgs::String pub_msg;
-    pub_msg.data= "Hello";
-    pub_.publish(pub_msg);
+   // std_msgs::String pub_msg;
+   // pub_msg.data= "Hello";
+  //  pub_.publish(pub_msg);
     //rate.sleep();
 
     //blur the image

@@ -136,12 +136,6 @@ target_link_libraries(label_detector
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/label_detector_node.cpp)
 add_executable(label_detector_node src/main.cpp)
-## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
-#  DEPENDS system_lib
-
 target_link_libraries(label_detector_node
     ${catkin_LIBRARIES}
     label_detector

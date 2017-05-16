@@ -11,6 +11,7 @@
 using namespace std;
 using namespace cv;
 
+
 class LabelDetector
 {
     private:
@@ -20,7 +21,7 @@ class LabelDetector
         cv::Mat image_op_;
         cv::Mat image_ip_;
     public:
-        LabelDetector(const std::string &str_filename);
+        LabelDetector();
         bool is_image_open;
         vector<vector<Point> > contours;
         void ReadImage();
