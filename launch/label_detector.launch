@@ -1,0 +1,3 @@
+<launch>
+    <node name="label_detector" pkg="label_detector" type="label_detector"  />
+</launch>
