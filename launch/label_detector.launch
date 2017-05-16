@@ -1,5 +1,5 @@
 <launch>
-	<arg name="image"/>
+	<arg name="image" />
     <node name="label_detector_node" pkg="label_detector" type="label_detector_node" output="screen">  
     	<param name="image_src" value="$(arg image)"/>
     </node>

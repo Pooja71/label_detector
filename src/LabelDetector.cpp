@@ -2,9 +2,10 @@
 
 LabelDetector::LabelDetector():is_image_open(true)
 {
-    ros::NodeHandle pnh;
-    nh_.getParam("image_src", str_filename_);
-    ROS_INFO("%s",str_filename_.c_str());
+    ros::NodeHandle pnh("~");
+    if(!pnh.getParam("image_src", str_filename_))
+        ROS_INFO("Filename could not be fetched");
+ //   ROS_INFO("filename: %s",str_filename_.c_str());
  //   pub_= nh_.advertise<std_msgs::String>("labels",100);   
     ReadImage();
 }
