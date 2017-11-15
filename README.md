@@ -1,7 +1,17 @@
-This project detects rectangles of the labels on packaging boxes. 
+This project detects rectangles of packaging labels on packaging boxes. 
 
-To run:<br/>
+**Assumption:**
+* The labels are whole and not torn. 
+
+**Requirement**
+* ROS (Indigo or Kinetic)
+* OpenCV
+
+**Run instruction:**<br/>
 roslaunch label__detector label_detector.launch image:=(absolute path of image)
 
-Few of the assumptions made are as follows:
-1. The labels are whole and not torn. 
+![alt tag](https://github.com/Pooja71/label_detector/blob/master/blob/216.jpg)</br> </br>
+![alt_tag](https://github.com/Pooja71/label_detector/blob/master/blob/label_detector_output.png)
+
+
+
